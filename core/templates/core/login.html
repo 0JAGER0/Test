@@ -6,29 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="{% static 'core/css/login.css' %}" />
     <title>Inicio de sesion</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap');
+
+
+body{
+background: url("https://images8.alphacoders.com/429/thumb-1920-429202.jpg");
+background-attachment: fixed;
+margin: 3%;
+}
+
+#letra_inicio{
+color:white;
+font-family: 'lobster', cursive;
+}
+#letra_registro{
+color: white;
+margin-right: 500px;
+font-family: 'lobster', cursive;
+}
+
+#boton_ini{
+font-family: 'lobster', cursive;
+}
+
+#nosotros{
+font-family: 'lobster', cursive;
+}
+
+#productos{
+font-family: 'lobster', cursive;
+}
+
+#contactos{
+font-family: 'lobster', cursive;
+}
+#buscar{
+font-family: 'Lobster', cursive;
+}
+#boton_busc{
+    font-family: 'Lobster', cursive;
+}
+
+#navegador{
+    background-color: gray
+    }
+
+
 #formularioXD{
-background: url(https://i.pinimg.com/originals/da/a6/55/daa6550f1247a73508c5560300d9d697.jpg);
-max-width: 50%;
-max-height: 80%;
-border-radius: 20px;
-background-repeat: no-repeat;
-background-size: cover;
+    width: 450px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50% );
+    border-radius: 60px 60px 60px 60px;
+    padding: 70px 30px;
+    font-family: 'Lobster', cursive;
+    background: url(https://i.pinimg.com/originals/da/a6/55/daa6550f1247a73508c5560300d9d697.jpg);
 
 }
 
-label{
-color: yellow;
-font-family: 'lobster', cursive;
+.form h4{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    color: white;
+}
+.form input{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+        border-radius: 20px;
+
 }
 
-button{
-font-family: 'lobster', cursive;
+.form input[type="text"],
+.form input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(211, 27, 27);
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.form label{
+color: white;
+font-weight: bold;
+display: block;
+font-family: 'Big Shoulders Stencil Display', cursive;
+font-size: 30px;
+}
+
+
+form. button{
+font-family: 'Big Shoulders Stencil Display', cursive;
+font-size: 30px;
+    margin-right: 40px;
 }
 
 </style>
@@ -76,30 +161,29 @@ font-family: 'lobster', cursive;
             </div>
         </nav>
     </nav>
-
-    <header>
-        <h1 style="margin-top: 90px; color: rgb(23, 184, 77); ">
-        Inicio de sesion
-        </h1>    
-        </header>
+</header>
     
     <form class="form" method="post">
-        {% csrf_token %}
-    <div class="form-row" id="formularioXD">
+        {% csrf_token %} 
+        <div class="form-row" id="formularioXD">
         <div class="form-group col-md-6">
-
-        <label for="id_username">Username</label>
-        <input type="text" name="username" autocomplete="username" maxlength="150" class="form-control"  id="id_username">
-
-        <label for="id_password">Password:</label>
-        <input type="password" name="password" autocomplete="current-password" class="form-control"  id="id_password">
+        <h4> Inicio de sesion </h4> 
     
+        <div>
+        <label for="id_username">Usuario: </label> 
+        <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
         </div>
-    </div>
+    
+        <div>
+        <label for="id_password">Contraseña: </label>
+        <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+        </div>
 
-    <button type="submit" id="submit" class="btn btn-primary">
-        Iniciar Sesion
-    </button>
+        <div>
+        <button type="submit" id="submit" class="btn btn-primary">
+            Iniciar Sesion
+        </button>
+        </div>
 
     </form> 
 
