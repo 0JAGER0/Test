@@ -39,4 +39,3 @@ def formulario_registro(request):
     return render(request,'core/formulario_arriendo.html')
 
 
-
