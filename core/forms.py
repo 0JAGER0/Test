@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from .models import registroUsuario 
+from .models import registroUsuario,arriendoCleta,cletaRevision
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -24,3 +24,7 @@ class FormularioRegistro(ModelForm):
         fields = ['usuario','nombres','apellidos','correo','contraseña']
         
 
+class cletaForm(ModelForm):
+    class Meta:
+        model = cletaRevision
+        fields = ['idbicicleta','modelo','porte','aro','marca','stock','estado']
