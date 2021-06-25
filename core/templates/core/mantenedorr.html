@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>mantenedorr</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navegador">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-bicycle" viewBox="0 0 16 16">
+                    <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5zm1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139L5.5 6.943zM8 9.057 9.598 6.5H6.402L8 9.057zM4.937 9.5a1.997 1.997 0 0 0-.487-.877l-.548.877h1.035zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765l1.027-1.643zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53L11.55 8.623z"/>
+                  </svg>
+                <a class="navbar-brand" id="TITULO" >Motorbike company</a>          
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'menu'%}" id="boton_ini">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                            <li class="nav-item active" >
+                                <a class="nav-link" href="{% url 'mantenedorr' %}" id="letra_registro">mantenedor <span class="sr-only">(current)</span></a>
+                            </li> 
+                            <li class="nav-item active" id="link_iniciar_sesion">
+                                <a class="nav-link" href="{% url 'logout'%}" id="letra_inicio">logout <span class="sr-only">(current)</span></a>
+                            </li>
+                        {% else %}
+                            <li class="nav-item active" id="link_iniciar_sesion">
+                                <a class="nav-link" href="{% url 'login'%}" id="letra_inicio">Iniciar Sesion <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active" id="link_registro">
+                                <a class="nav-link" href="{% url 'registro'%}" id="letra_registro">Registro <span class="sr-only">(current)</span></a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" id="buscar">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="boton_busc">Buscar</button>
+                  </form>
+                </div>
+            </nav>
+        </nav>
+    </header>
+
+
+    <br>
+    <br>
+    <br>
+
+    <div class="conetendor">  
+        <table class="table table-bordered" id="tabla_new">    
+               <p id="Hiper_agregar"><b>Ingresar aqui para agregar una nueva torta al listado de productos:</b><a href= "{% url 'agregar' %}" >Agregar bicicleta</a></p>                    
+            <thead>               
+            <tr class="definidores">
+                <th scope="col">Modelo</th>
+                <th scope="col">Porte</th>
+                <th scope="col">Aro</th>
+                <th scope="col">Marca</th>  
+                <th scope="col">Stock</th>     
+                <th scope="col">Estado</th>             
+                <th scope="col">Modificador de datos</th>
+                <th scope="col">Eliminador de datos</th>
+              </tr>
+            </thead>
+            {% for cleta in cletas %}
+            <tbody>
+              <tr>
+                <th scope="row">{{cleta.modelo}}</th>
+                <td>{{cleta.porte}}</td>
+                <td>{{cleta.aro}}</td>
+                <td>{{cleta.marca}} </td>  
+                <td>{{cleta.stock}} </td> 
+                <td>{{cleta.estado}} </td>              
+                <td class="Modificador"><a href="{% url 'mantenedormodd' cleta.idbicicleta %}">MODIFICAR</a> </td>
+                <td class="ELIMINADOR"><a href="{% url 'delete' cleta.idbicicleta %}">ELIMINAR</a></td>
+              </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+
+  
+        
+</div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ urlpatterns = [
     path('formulario_registro',formulario_registro,name="formulario_registro"),
     path('login_adminn/',LoginView.as_view(template_name='core/login_adminn.html'),name="login_adminn"),
     path('mantenedorr/',mantenedor,name="mantenedorr"),
-    path('mantenedormodd/<pk>',mantenedormod,name="mantenedormod"),
+    path('mantenedormodd/<pk>',mantenedormod,name="mantenedormodd"),
     path('agregar/',agregar,name="agregar"),
     path('delete/<pk>/',delete,name="delete"),
 

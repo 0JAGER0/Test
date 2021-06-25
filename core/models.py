@@ -14,7 +14,7 @@ class arriendoCleta(models.Model):
     
 
     def __str__(self):
-        return f'{self.idRegistro}, {self.modelo}'
+        return f'{self.idbicicleta}, {self.modelo}'
 
 class registroUsuario(models.Model):
     usuario = models.CharField(primary_key=True,max_length=50,verbose_name="Nombre Usuario")
@@ -30,9 +30,13 @@ class registroUsuario(models.Model):
 
 class cletaRevision(models.Model):
     idbicicleta = models.AutoField(primary_key=True, verbose_name="id bicicleta")
-    modelo = models.CharField(max_length=50,verbose_name="Modelo bicicleta")
-    porte = models.CharField(max_length=30, verbose_name="porte bicicleta")
+    modelo = models.CharField(max_length=50,verbose_name="modelo")
+    porte = models.CharField(max_length=30, verbose_name="porte")
     aro = models.IntegerField(verbose_name="aro de rueda")
     marca = models.CharField(max_length=50  ,verbose_name="marca bicicleta")
-    stock = models.IntegerField( verbose_name="cantidad tortas")
-    estado = models.CharField(max_length=50  ,verbose_name="marca bicicleta")
+    stock = models.IntegerField( verbose_name="stock")
+    estado = models.CharField(max_length=50  ,verbose_name="estado")
+
+    def __str__(self):
+        return f'{self.idbicicleta}, {self.modelo}'
+

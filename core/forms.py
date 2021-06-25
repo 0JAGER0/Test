@@ -28,3 +28,9 @@ class cletaForm(ModelForm):
     class Meta:
         model = cletaRevision
         fields = ['idbicicleta','modelo','porte','aro','marca','stock','estado']
+
+
+class arriendoForm(ModelForm):
+    class Meta:
+        model = arriendoCleta
+        fields = ['idbicicleta','modelo','porte','aro','marca']
