@@ -6,6 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>mantenedorr</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{
+background: url("https://i.pinimg.com/736x/8c/d1/65/8cd165f56b7391ac6de167f77853b858.jpg");
+background-attachment: fixed; 
+margin: 5%;
+}
+#tabla_new{
+background: darkslategray ;
+color: white;
+}
+@media screen and (max-width: 600px) {
+table{
+width:100%;
+}
+thead {
+display: none;
+}
+tr:nth-of-type(2n) {
+background-color: inherit;
+}
+tr td:first-child {
+font-weight:bold;
+font-size: 20px;
+}
+tbody td {
+display: block;
+text-align:center;
+}
+tbody td:before {
+content: attr(data-th);
+display: block;
+text-align:center;
+}
+}
+#Hiper_agregar{
+font-size: 20px;
+color: white;
+}
+#navegador{
+background-color: gray;
+width: 100%;
+}
+.definidores{
+background-color: rgb(80, 78, 76);
+}
+.Modificador{
+    background: rgb(34, 247, 165);
+}
+.ELIMINADOR{
+    background: rgb(230, 61, 61);
+}
+a{
+    color: black;
+}
+#agregar{
+    color: rgb(233, 250, 2);
+}
+#TITULO{
+font-family: 'Lobster', cursive;
+font-size: 25px;
+max-width: 100%;
+}
+#letra_registro{
+color: white;
+font-family: 'Lobster', cursive;
+}
+        
+#letra_inicio{
+color:black;
+font-family: 'Lobster', cursive;  
+}
+#boton_ini{
+color:black;
+font-family: 'Lobster', cursive;  
+}
+
+</style>
+
 </head>
 <body>
     <header>
@@ -48,14 +128,13 @@
         </nav>
     </header>
 
-
     <br>
     <br>
     <br>
 
     <div class="conetendor">  
         <table class="table table-bordered" id="tabla_new">    
-               <p id="Hiper_agregar"><b>Ingresar aqui para agregar una nueva torta al listado de productos:</b><a href= "{% url 'agregar' %}" >Agregar bicicleta</a></p>                    
+               <p id="Hiper_agregar"><b>Ingresar aqui para agregar una nueva torta al listado de productos:</b><a id="agregar" href= "{% url 'agregar' %}"> Agregar bicicleta</a></p>                    
             <thead>               
             <tr class="definidores">
                 <th scope="col">Modelo</th>
@@ -83,11 +162,8 @@
             </tbody>
             {% endfor %}
         </table>
-
-  
-        
+     
 </div>
-    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

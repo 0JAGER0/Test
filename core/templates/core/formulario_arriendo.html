@@ -7,7 +7,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="{% static 'core/css/formulario_solici.css'%}" />
-   
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body{
+    background: url("https://p4.wallpaperbetter.com/wallpaper/331/574/354/abstract-1920x1080-carbon-fiber-wallpaper-preview.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 3%;  
+}
+
+#navegador{
+    background-color: gray
+    }
+
+#link_iniciar_sesion{
+    font-family: 'Cabin', sans-serif;
+}
+    
+#link_registro{
+font-family: 'Cabin', sans-serif;   
+}
+    /*LETRA BOTON INICIO SESION*/
+#letra_inicio{
+color:white;
+font-family: 'lobster', cursive;
+}
+    /* LETRA REGISTRO BOTON*/
+#letra_registro{
+color: white;
+font-family: 'lobster', cursive;
+margin-right: 180px;
+}    
+
+#boton_ini{
+font-family: 'lobster', cursive;
+}
+#productos{
+font-family: 'lobster', cursive;
+}    
+#TITULO{
+font-family: 'Lobster', cursive;
+font-size: 29px;
+}  
+
+#formulario{
+    width: 700px;
+    height: 800px;
+    margin: auto;
+    background: rgb(0,0,0,0.4);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 150px;
+    border-radius: 1px;
+}
+
+h2{
+    color:#fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width: 50px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border: none;
+    width: 400px; 
+    border-radius: 10px;
+    margin-top: 125px;
+}
+
+textarea{
+    max-width: 100%;
+    width: 400px;
+    border-radius: 10px;
+}
+
+#boton{
+    background: #31384A;
+    color: #fff;
+    padding: 20px;
+    
+}
+
+.footer {
+    padding: 1.5em;
+    text-align: center;
+    background-color: #60371E;
+    bottom: 0;
+}
+#rut{
+    margin-top: -10px;
+    width: 500px;
+    height: 45px;
+    margin-right: -50px;
+}
+
+#nombre{
+    margin-top: -10px;
+    width: 500px;
+    height: 45px;
+    margin-right: -50px;
+}
+
+#correo{
+    margin-top: -10px;
+    width: 500px;
+    height: 45px;
+    margin-right: -50px;
+}
+
+#telefono{
+    margin-top: -10px;
+    width: 500px;
+    height: 45px;
+    margin-right: -50px;
+}
+
+#mensaje{
+    margin-top: 2px;
+    width: 500px;
+    height: 180px;
+    margin-right: -50px;
+}
+
+#Enviar{
+margin-top: 320px;
+margin-left: 115px;
+width:400px;
+height: 50px;
+}
+
+#l_nombre_completo{
+margin-top: 20px;
+color: white;
+}
+
+#l_mensaje{
+margin-top: 90px;
+color: white;
+}
+
+form .error{
+color: #ff0000;
+} 
+
+#buscar{
+margin-top: 15px;
+}
+
+#boton_busc{
+ margin-top: -30px;   
+}
+
+#l_correo{
+margin-top: 20px;
+color: white;
+}
+
+#l_numero{
+    margin-top: 22px;   
+    color: white; 
+}
+
+#l_cleta{
+    margin-top: 15px; 
+    color: white; 
+}
+
+#l_aro{
+    margin-top: 17px;  
+    color: white;
+}
+
+#l_rut{
+    color: white;
+}
+
+#Enviar{
+    margin-top: 50px;
+}
+
+    @media screen and (max-width:500px) {     .grid-container {         display: flex;         flex-direction: column;     } }    
+</style>
     <title>formulario</title>
 </head>
 <body>
