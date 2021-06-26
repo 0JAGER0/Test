@@ -6,9 +6,193 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<style>
+ 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
 
+
+body {
+    background-image: url("https://initiate.alphacoders.com/images/101/cropped-1920-1080-1011195.jpg?3469");
+    background-size: cover ;
+    font-family: sans-serif;
+    height: 100vh; 
+    max-width: 100%;
+}
+
+.img{
+    max-width: 100%;
+}
+.form {
+    width: 450px;
+    height: 500px;
+    background-color: rgb(44, 148, 173);
+    color: rgb(10, 10, 10);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50% );
+    border-radius: 60px 60px 60px 60px;
+    padding: 60px 40px;
+    font-family: 'Lobster', cursive;
+}
+.form .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+
+}
+.form h4{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Lobster', cursive;
+}
+.form h2{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Lobster', cursive;
+}
+.form h3{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.form label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+    font-family: 'Lobster', cursive;
+}
+.form input{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form input[type="text"],
+.form input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(211, 27, 27);
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    border-radius: 20px;
+    font-family: 'Work Sans', sans-serif;
+}
+.form input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(196, 21, 21);
+    color: rgb(39, 14, 151);
+    font-size: 18px;
+    border-radius: 20px;  
+}
+.form input[type="submit"]:hover {
+    transform: scale(0.95);
+}
+.form a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+    margin: 0;
+    padding-left: 140px;
+}
+.form a:hover {
+    color:white;
+}
+.form button{
+    margin-left: 100px;
+    padding-left : 70px;
+    padding-right : 70px;
+    color:rgb(44, 148, 173);
+    background: rgb(255, 255, 255);
+}
+.footer {
+
+    padding: 1.5em;
+    text-align: center;
+    background-color: #0a0a0a;
+    font-family: 'Lobster', cursive; 
+}
+#TITULO{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    max-width: 100%; 
+}
+#cuadr_regis{
+    width: 500px;
+    height: 500px;
+}
+#link_iniciar_sesion{
+    font-family: 'Lobster', cursive;    
+}
+#link_registro{
+    font-family: 'Lobster', cursive;
+    margin-right: 180px;  
+}
+#letra_inicio{
+    color:white;
+    font-family: 'Lobster', cursive; 
+}
+/* LETRA REGISTRO BOTON*/
+#letra_registro{
+    color: white;
+    font-family: 'Lobster', cursive;
+}    
+/*diego, te arregle el que el registro e iniciar sesion quedaran a la derecha*/ 
+/*y centre un poco el titulo que pusiste , el color cambialo si sientes que esta poco visible pero era una prueba nada mas*/
+#TITULOH1{
+    font-family: 'Great Vibes', cursive;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 65px;
+    max-width: 100%;
+    
+}
+#logo{
+    margin-right: 10px;
+    max-width: 100%;
+}
+.clear{clear:both;}
+
+.separar {
+    margin-right: 10px;
+    
+}
+form{
+    font-family: 'lobster';
+}
+ul{
+    font-family: 'lobster', cursive;
+    margin-left: 30px;
+    font-size: 20px;
+}
+form .error{
+    color: #fa8c8c;
+    font-family: 'Roboto', sans-serif;
+  }
+#navegador{
+background-color: rgb(255, 127, 80);
+width: 100%;
+}
+@media screen and (max-width:500px) {     .grid-container {         display: flex;         flex-direction: column;     } } 
+
+</style>
 </head>
 <body class="d-flex flex-column justify-content-between">
 
