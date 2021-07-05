@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>mantenedorr</title>
+    <title>mantenedor</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body{
-background: url("https://initiate.alphacoders.com/images/101/cropped-1920-1080-1011195.jpg?3469");
+background-image: href="{% static 'core/img/fondobicicleta.jpg' %}";
 background-attachment: fixed; 
 margin: 5%;
 }
@@ -144,8 +145,8 @@ font-family: 'Lobster', cursive;
                 <th scope="col">Marca</th>  
                 <th scope="col">Stock</th>     
                 <th scope="col">Estado</th>             
-                <th scope="col">Modificador de datos</th>
-                <th scope="col">Eliminador de datos</th>
+                <th scope="col">Editar datos</th>
+                <th scope="col">Eliminador datos</th>
               </tr>
             </thead>
             {% for cleta in cletas %}
