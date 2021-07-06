@@ -10,8 +10,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body{
-background: url("https://initiate.alphacoders.com/images/101/cropped-1920-1080-1011195.jpg?2121");
-background-attachment: fixed; 
+background: url("https://images-ext-2.discordapp.net/external/pCvOHrxCU52MLj_76iPLJfjjJbmAMBrZyNoai8YxENo/https/s1.1zoom.me/big0/868/Sunrises_and_sunsets_447602.jpg?width=1116&height=676");
+background-attachment: fixed;
+background-size: cover; 
 margin: 5%;
 }
 #table_add{
@@ -53,6 +54,10 @@ width: 300px;
 #title_add{
     margin-right: 100px; 
     font-family: 'Lobster', cursive;  
+    color:  rgb(243, 160, 51);
+}
+.parraf_instr{
+color:  rgb(255, 127, 80);
 }
 </style>
 
@@ -106,7 +111,7 @@ width: 300px;
         {% csrf_token %}
         <!---{{form.as_table}}-->
     <h1 id="title_add">
-        Añadir bicletas
+        Añadir Datos
     </h1>
 
 <p class ="parraf_instr"><b>Rellene los campos correspondientes para agregar una bicicleta a la lista</b></p>
